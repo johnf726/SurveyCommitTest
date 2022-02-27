@@ -16,6 +16,7 @@
 		22DCFDA927C93C180013605E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22DCFDA727C93C180013605E /* LaunchScreen.storyboard */; };
 		22DCFDB127C9482A0013605E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCFDB027C9482A0013605E /* HomeViewController.swift */; };
 		22DCFDB527C94A0E0013605E /* Services-Survey-StoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22DCFDB427C94A0E0013605E /* Services-Survey-StoryBoard.storyboard */; };
+		906C3F1B27CC2D4D00A7C770 /* ServicesAndSurvey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 906C3F1A27CC2D4D00A7C770 /* ServicesAndSurvey.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		22DCFDAA27C93C180013605E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22DCFDB027C9482A0013605E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		22DCFDB427C94A0E0013605E /* Services-Survey-StoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Services-Survey-StoryBoard.storyboard"; sourceTree = "<group>"; };
+		906C3F1A27CC2D4D00A7C770 /* ServicesAndSurvey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServicesAndSurvey.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				22DCFD9B27C93C160013605E /* SceneDelegate.swift */,
 				22DCFD9D27C93C160013605E /* ViewController.swift */,
 				22DCFD9F27C93C160013605E /* Main.storyboard */,
+				906C3F1A27CC2D4D00A7C770 /* ServicesAndSurvey.storyboard */,
 				22DCFDB427C94A0E0013605E /* Services-Survey-StoryBoard.storyboard */,
 				22DCFDB027C9482A0013605E /* HomeViewController.swift */,
 				22DCFDA527C93C180013605E /* Assets.xcassets */,
@@ -136,6 +139,7 @@
 			files = (
 				22DCFDA927C93C180013605E /* LaunchScreen.storyboard in Resources */,
 				22DCFDB527C94A0E0013605E /* Services-Survey-StoryBoard.storyboard in Resources */,
+				906C3F1B27CC2D4D00A7C770 /* ServicesAndSurvey.storyboard in Resources */,
 				22DCFDA627C93C180013605E /* Assets.xcassets in Resources */,
 				22DCFDA127C93C160013605E /* Main.storyboard in Resources */,
 			);
