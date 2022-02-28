@@ -17,23 +17,16 @@ extension String {
     }
 }
 
-
-
 // MARK: HideShowPasswordTextFieldDelegate
 var iconClick = false
 let imageIcon = UIImageView()
 
 class ViewController: UIViewController {
     
-    
-    
-    
-    
-    
-    
     // MARK: - Outlets
     @IBOutlet weak var userEmailText: UITextField!
     
+    @IBOutlet weak var error: UILabel!
     @IBOutlet weak var userPasswordText: UITextField!
     
     // MARK: - IBActions
@@ -90,17 +83,27 @@ class ViewController: UIViewController {
     // MARK: - Email , pass
     private func performLogin() {
         if userEmailText.text!.isEmail {
-            print("\(String(describing: userEmailText.text)) is a valid e-mail address")
-            userEmailText.backgroundColor = .white
+            print("\(String(describing: userEmailText.text!)) is a valid e-mail address")
+        //    userEmailText.backgroundColor = .white
             SaveData()
-            //  ViewData()
-            let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let scv = sb.instantiateViewController(withIdentifier: "welcomePage") as! HomeViewController
-            present(scv, animated: true, completion: nil)
+            ViewData()
+            error.backgroundColor = .gray
+            error.text = "welcomePage"
         } else {
             print("\(userEmailText.text!) is not a valid e-mail address")
-            userEmailText.backgroundColor = .red
+           // userEmailText.backgroundColor = .red
+            error.backgroundColor = .red
+            error.text = "is not a valid e-mail address"
+            
             userEmailText.tintColor = .white
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+        if userEmailText.text!.isEmail {
+            return true
+        }else{
+            return false
         }
     }
     
@@ -109,12 +112,11 @@ class ViewController: UIViewController {
         NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: self)
     }
     
-    
 //    func sendEmail() {
 //        if MFMailComposeViewController.canSendMail() {
 //            let mail = MFMailComposeViewController()
 //            mail.mailComposeDelegate = self
-//            mail.setToRecipients(["you@yoursite.com"])
+//            mail.setToRecipients(["davisgon@gmail.com"])
 //            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
 //
 //            present(mail, animated: true)
@@ -126,8 +128,6 @@ class ViewController: UIViewController {
 //    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
 //        controller.dismiss(animated: true)
 //    }
-    
-    
     
     
     // MARK: - KeyChain
@@ -163,23 +163,21 @@ class ViewController: UIViewController {
                let uid = item[kSecAttrAccount as String] as? String,
                let password = item [ kSecValueData  as String] as? Data,
                let pass = String(data: password, encoding: .utf8){
-                
-                print("******:Id is :", uid, " Passs is:", pass)
+                print("******:Id is :", userEmailText.text!, " Passs is:" )
             }
             else{
                 print("no data Found")
             }
         }
-        
         print("View Data")
     }
-    
-    
     
     // MARK: - Prepare Send Data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let svc = segue.destination as!  HomeViewController
-        svc.userEmail = userEmailText.text!
+        print("******:Id is :", userEmailText.text!, " Passs is:" )
+        
+        svc.userEmail_Home = userEmailText.text!
     }
     
 }

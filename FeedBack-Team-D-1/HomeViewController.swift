@@ -8,17 +8,26 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    @IBOutlet weak var userEmail: UILabel!
+    
     @IBOutlet weak var goToServiceButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Welcome my Friend",userEmail)
         
+        if text != nil {
+            userEmail.text = text
+        }
+        
+        
+        print("Welcome my Friend::",userEmail_Home)
+        userEmail.text = userEmail_Home;
         setupUI()
+        ViewData()
         // Do any additional setup after loading the view.
     }
     
-    var userEmail = ""
+    var userEmail_Home = ""
+    var text : String?
     
     // MARK: - FUNCTIONS
     private func setupUI() {
@@ -28,7 +37,7 @@ class HomeViewController: UIViewController {
     func ViewData() {
          // Set query
          let q : [String : Any] = [ kSecClass  as String : kSecClassGenericPassword,
-                                    kSecAttrAccount as String : userEmail ,
+                                    kSecAttrAccount as String : userEmail_Home ,
                                     kSecReturnAttributes as String: true,
                                     kSecReturnData as String : true]
          
@@ -41,7 +50,7 @@ class HomeViewController: UIViewController {
                 let password = item [ kSecValueData  as String] as? Data,
                 let pass = String(data: password, encoding: .utf8){
                  
-                 print("id is :", uid, " Passs is:", pass)
+                 print("1.-id is :", uid, " Passs is:", pass)
              }
              else{
                  print("no data Found")

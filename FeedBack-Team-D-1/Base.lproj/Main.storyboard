@@ -44,6 +44,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="SUBMIT"/>
                                 <connections>
                                     <action selector="submitButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jv7-yb-Q2e"/>
+                                    <segue destination="UQI-Ys-X9d" kind="show" id="rXp-yF-uvj"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.icloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0b0-Rb-3jh" userLabel="userImage">
@@ -56,12 +57,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="error" text="Please enter your username and password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw4-TZ-69j">
+                                <rect key="frame" x="48" y="282" width="323" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="oip-A8-mJI" userLabel="NavigationSignUpToHome"/>
                     <connections>
+                        <outlet property="error" destination="Dw4-TZ-69j" id="lqS-tg-AO9"/>
                         <outlet property="submitButton" destination="ZBz-K8-Rj7" id="e0e-MW-CT8"/>
                         <outlet property="userEmailText" destination="2TZ-Ut-WS0" id="8GP-Yi-VmS"/>
                         <outlet property="userPasswordText" destination="yB2-Yl-BS1" id="Clq-K0-97m"/>
@@ -120,15 +129,16 @@
                         <viewLayoutGuide key="safeArea" id="qIS-Ou-dxw"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tAp-zv-UdA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M98-O7-HnZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-548" y="-658"/>
+            <point key="canvasLocation" x="-390" y="-568"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="Nfj-h6-jbz">
             <objects>
-                <viewController storyboardIdentifier="welcomePage" id="UQI-Ys-X9d" userLabel="HomeViewController" customClass="HomeViewController" customModule="FeedBack_Team_D_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcomePage" modalPresentationStyle="fullScreen" id="UQI-Ys-X9d" userLabel="HomeViewController" customClass="HomeViewController" customModule="FeedBack_Team_D_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uu6-80-qjw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,11 +159,21 @@
                                 <buttonConfiguration key="configuration" style="plain" title="CLICK HERE FOR SERVICES">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="6aF-ka-ygN" kind="show" id="jGb-gk-cZH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to CityEscape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haB-wW-BLi" userLabel="welcomeLabel">
                                 <rect key="frame" x="70" y="246" width="274" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userEmailHome1" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WQ-nA-0ld" userLabel="userEmailHome">
+                                <rect key="frame" x="70" y="290" width="230" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -164,11 +184,12 @@
                     <navigationItem key="navigationItem" title="Welcome to CityEscape" id="ZtN-ax-zbS"/>
                     <connections>
                         <outlet property="goToServiceButton" destination="oXG-yh-KoQ" id="Je2-Kf-oRk"/>
+                        <outlet property="userEmail" destination="0WQ-nA-0ld" id="Eth-fu-qXr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="un9-0e-V3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-987" y="861"/>
+            <point key="canvasLocation" x="-784" y="1140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YPP-f0-UdR">
@@ -193,7 +214,7 @@
             <objects>
                 <viewController id="XRr-Li-c6h" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fGg-fw-Ua1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resort Survey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wba-vB-5rW">
@@ -429,7 +450,7 @@
             <objects>
                 <tableViewController id="bPd-nz-5Q0" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LeQ-J5-H6Q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
