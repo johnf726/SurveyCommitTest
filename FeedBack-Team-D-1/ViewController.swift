@@ -42,6 +42,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print("Inicio Register")
         setupUI()
+        ShowPassword()
+       
+    }
+    
+    func ShowPassword() {
         // ***************************** Passs *******************************
         imageIcon.image = UIImage(named: "closeeye")
         let contentView = UIView()
@@ -73,7 +78,6 @@ class ViewController: UIViewController {
         //            }
         //        }
     }
-    
     
     // MARK: - FUNCTIONS
     
