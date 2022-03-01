@@ -31,9 +31,11 @@ class ViewController: UIViewController {
     
     // MARK: - IBActions
     @IBOutlet weak var submitButton: UIButton!
-    
+    // MARK: - STUP SUBMIT BUTTON
     @IBAction func submitButton2(_ sender: Any) {
         performLogin()
+        addDataUser()
+        getOneDataUser()
         
     }
     
@@ -133,6 +135,21 @@ class ViewController: UIViewController {
 //        controller.dismiss(animated: true)
 //    }
     
+    // MARK: - CORE DATA
+    func addDataUser(){
+        let date = Date()
+        CoreDataManage.inst.addDataUser(emailP: userEmailText.text!, passwordP: userPasswordText.text!, dateCreated: date  )
+        print("Data Saved into USER Entity")
+    }
+    
+    func getOneDataUser() {
+        var d =  CoreDataManage.inst.getOneDataUser(n: userEmailText.text!)
+      
+        print("GetOneDataUser from USER ", d.email," Pass ", d.password, "Date Created ", d.dateCreated)
+        
+    }
+    
+    
     
     // MARK: - KeyChain
     // KeyChain
@@ -145,9 +162,9 @@ class ViewController: UIViewController {
         
         // **********   add Data
         if SecItemAdd(att as CFDictionary,nil ) == noErr{
-            print("Data Saved successfully")
+            print("Data Saved successfully KeyChain")
         }else{
-            print("data not saved")
+            print("Data not saved KeyChain")
         }
         // ViewData()
     }

@@ -10,6 +10,7 @@
 		2285CC4C27CE6ADA0068D55C /* WellcomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2285CC4B27CE6ADA0068D55C /* WellcomeStoryboard.storyboard */; };
 		2285CC4F27CE6BB10068D55C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285CC4D27CE6BB10068D55C /* User+CoreDataClass.swift */; };
 		2285CC5027CE6BB10068D55C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285CC4E27CE6BB10068D55C /* User+CoreDataProperties.swift */; };
+		2285CC5227CE8BB00068D55C /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285CC5127CE8BB00068D55C /* CoreDataManage.swift */; };
 		22AC054027CE59220019A959 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AC053F27CE59220019A959 /* LoginStoryboard.storyboard */; };
 		22D0F2C527CCF25200E2C985 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */; };
 		22D0F2C727CCF6E400E2C985 /* TnksStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D0F2C627CCF6E400E2C985 /* TnksStoryboard.storyboard */; };
@@ -30,6 +31,7 @@
 		2285CC4B27CE6ADA0068D55C /* WellcomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WellcomeStoryboard.storyboard; sourceTree = "<group>"; };
 		2285CC4D27CE6BB10068D55C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2285CC4E27CE6BB10068D55C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2285CC5127CE8BB00068D55C /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
 		22AC053F27CE59220019A959 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		22D0F2C627CCF6E400E2C985 /* TnksStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TnksStoryboard.storyboard; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				22DCFDB027C9482A0013605E /* HomeViewController.swift */,
 				22F4B5A127CCE9F9004284AB /* StartViewController.swift */,
 				22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */,
+				2285CC5127CE8BB00068D55C /* CoreDataManage.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,8 +123,8 @@
 		22DCFD9827C93C160013605E /* FeedBack-Team-D-1 */ = {
 			isa = PBXGroup;
 			children = (
-				2285CC4727CE695C0068D55C /* ViewControl */,
 				2285CC4627CE69550068D55C /* Model */,
+				2285CC4727CE695C0068D55C /* ViewControl */,
 				22DCFD9927C93C160013605E /* AppDelegate.swift */,
 				22DCFD9B27C93C160013605E /* SceneDelegate.swift */,
 				22DCFDA527C93C180013605E /* Assets.xcassets */,
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22DCFDB127C9482A0013605E /* HomeViewController.swift in Sources */,
+				2285CC5227CE8BB00068D55C /* CoreDataManage.swift in Sources */,
 				22D0F2C527CCF25200E2C985 /* SurveyViewController.swift in Sources */,
 				22D0F2C927CCF6F500E2C985 /* TnksViewController.swift in Sources */,
 				22DCFDA427C93C160013605E /* FeedBack_Team_D_1.xcdatamodeld in Sources */,
