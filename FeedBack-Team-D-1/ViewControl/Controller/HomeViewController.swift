@@ -10,7 +10,9 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var userEmail: UILabel!
     
-    @IBOutlet weak var goToServiceButton: UIButton!
+    
+   // @IBOutlet weak var goToServiceButton22: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,7 +23,7 @@ class HomeViewController: UIViewController {
         
         print("Welcome my Friend::",userEmail_Home)
         userEmail.text = userEmail_Home;
-        setupUI()
+    //    setupUI()
         ViewData()
         // Do any additional setup after loading the view.
     }
@@ -30,9 +32,9 @@ class HomeViewController: UIViewController {
     var text : String?
     
     // MARK: - FUNCTIONS
-    private func setupUI() {
-        goToServiceButton.layer.cornerRadius = 20
-    }
+//    private func setupUI() {
+//        goToServiceButton.layer.cornerRadius = 20
+//    }
    
     func ViewData() {
          // Set query
