@@ -25,6 +25,8 @@
 		22DCFDB127C9482A0013605E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCFDB027C9482A0013605E /* HomeViewController.swift */; };
 		22DCFDB527C94A0E0013605E /* ServicesAndSurveyStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22DCFDB427C94A0E0013605E /* ServicesAndSurveyStoryBoard.storyboard */; };
 		22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4B5A127CCE9F9004284AB /* StartViewController.swift */; };
+		2D863E4427D073AD00D8FCCE /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D863E4327D073AD00D8FCCE /* HomePage.storyboard */; };
+		2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D863E4527D0783B00D8FCCE /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		22DCFDB027C9482A0013605E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		22DCFDB427C94A0E0013605E /* ServicesAndSurveyStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServicesAndSurveyStoryBoard.storyboard; sourceTree = "<group>"; };
 		22F4B5A127CCE9F9004284AB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		2D863E4327D073AD00D8FCCE /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		2D863E4527D0783B00D8FCCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 				22D0F2C627CCF6E400E2C985 /* TnksStoryboard.storyboard */,
 				22DCFDB427C94A0E0013605E /* ServicesAndSurveyStoryBoard.storyboard */,
 				2285CC4B27CE6ADA0068D55C /* WellcomeStoryboard.storyboard */,
+				2D863E4327D073AD00D8FCCE /* HomePage.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				22F4B5A127CCE9F9004284AB /* StartViewController.swift */,
 				22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */,
 				2285CC5127CE8BB00068D55C /* CoreDataManage.swift */,
+				2D863E4527D0783B00D8FCCE /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D863E4427D073AD00D8FCCE /* HomePage.storyboard in Resources */,
 				22DCFDA927C93C180013605E /* LaunchScreen.storyboard in Resources */,
 				22D0F2C727CCF6E400E2C985 /* TnksStoryboard.storyboard in Resources */,
 				2285CC4C27CE6ADA0068D55C /* WellcomeStoryboard.storyboard in Resources */,
@@ -210,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */,
 				22DCFDB127C9482A0013605E /* HomeViewController.swift in Sources */,
 				2285CC5227CE8BB00068D55C /* CoreDataManage.swift in Sources */,
 				22D0F2C527CCF25200E2C985 /* SurveyViewController.swift in Sources */,
