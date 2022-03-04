@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class CoreDataManage{
+class CoreDataManage{  
     
     let context =  (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     static var inst = CoreDataManage()
@@ -90,17 +90,69 @@ class CoreDataManage{
     }
     
 //    func removeDataUser(mail: String){
-//        
+//
 //        var  fReq = NSFetchRequest<NSManagedObject>.init(entityName: "User")
 //        fReq.predicate = NSPredicate(format: "email == %@",n)
-//        
+//
 //        do{
 //            let st = try context?.fetch(fReq)
 //            context?.delete(st?.first as! User)
 //            try context?.save()
 //            print("Data Deleted in User")
 //        }catch{
-//            
+//
 //        }
 //    }
+    // MARK: - MANAGE USER-SCORE DATA
+    func addDataUserUserScore(emailP: String, scoreP: Int, dateCreated: Date){
+        let stu = NSEntityDescription.insertNewObject(forEntityName: "UserScore", into: context!) as! UserScore
+        
+        stu.email = emailP
+        stu.score = Int32(scoreP)
+        stu.dateCreated = dateCreated
+       
+        do{
+            try context?.save()
+            print("Data saved in User Score Entity")
+        }
+        catch{
+            print("Data not saved in User Score Entity")
+        }
+    }
+    
+    func getOneDataUserScore(n : String) -> UserScore {
+        var st2 = UserScore()
+        var fReq = NSFetchRequest<NSFetchRequestResult>(entityName: "UserScore")
+        fReq.predicate = NSPredicate(format: "email == %@", n)
+        fReq.fetchLimit = 1
+        
+        do{
+            let req = try context?.fetch(fReq ) as! [UserScore]
+            
+            if(req.count != 0){
+                st2 = req.first!
+                print("Data not found in User Sccore")
+            }
+        }catch{
+            
+        }
+        return st2
+        
+        
+    }
+    
+    // Get Data
+    func getDataUserScore () -> [UserScore]{
+        
+        var stu = [UserScore]()
+        let fReq = NSFetchRequest<NSFetchRequestResult>(entityName: "UserScore")
+   
+        do{
+            stu = try context?.fetch(fReq) as! [UserScore]
+        }catch{
+            print("Can not fetch any data from User Score Entity")
+        }
+        return stu
+    }
 }
+
