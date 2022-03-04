@@ -11,6 +11,10 @@
 		2285CC4F27CE6BB10068D55C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285CC4D27CE6BB10068D55C /* User+CoreDataClass.swift */; };
 		2285CC5027CE6BB10068D55C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285CC4E27CE6BB10068D55C /* User+CoreDataProperties.swift */; };
 		2285CC5227CE8BB00068D55C /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285CC5127CE8BB00068D55C /* CoreDataManage.swift */; };
+		228EB21827D1A5F700E75358 /* UserScore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228EB21627D1A5F700E75358 /* UserScore+CoreDataClass.swift */; };
+		228EB21927D1A5F700E75358 /* UserScore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228EB21727D1A5F700E75358 /* UserScore+CoreDataProperties.swift */; };
+		22A8971727D1A062009AC391 /* happy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22A8971527D1A061009AC391 /* happy.mp3 */; };
+		22A8971827D1A062009AC391 /* sad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22A8971627D1A061009AC391 /* sad.mp3 */; };
 		22AC054027CE59220019A959 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AC053F27CE59220019A959 /* LoginStoryboard.storyboard */; };
 		22D0F2C527CCF25200E2C985 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */; };
 		22D0F2C727CCF6E400E2C985 /* TnksStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D0F2C627CCF6E400E2C985 /* TnksStoryboard.storyboard */; };
@@ -34,6 +38,10 @@
 		2285CC4D27CE6BB10068D55C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2285CC4E27CE6BB10068D55C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2285CC5127CE8BB00068D55C /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
+		228EB21627D1A5F700E75358 /* UserScore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserScore+CoreDataClass.swift"; path = "../../UserScore+CoreDataClass.swift"; sourceTree = "<group>"; };
+		228EB21727D1A5F700E75358 /* UserScore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserScore+CoreDataProperties.swift"; path = "../../UserScore+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		22A8971527D1A061009AC391 /* happy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = happy.mp3; sourceTree = "<group>"; };
+		22A8971627D1A061009AC391 /* sad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sad.mp3; sourceTree = "<group>"; };
 		22AC053F27CE59220019A959 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		22D0F2C627CCF6E400E2C985 /* TnksStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TnksStoryboard.storyboard; sourceTree = "<group>"; };
@@ -68,8 +76,10 @@
 		2285CC4627CE69550068D55C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2285CC4D27CE6BB10068D55C /* User+CoreDataClass.swift */,
 				2285CC4E27CE6BB10068D55C /* User+CoreDataProperties.swift */,
+				2285CC4D27CE6BB10068D55C /* User+CoreDataClass.swift */,
+				228EB21727D1A5F700E75358 /* UserScore+CoreDataProperties.swift */,
+				228EB21627D1A5F700E75358 /* UserScore+CoreDataClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +120,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		22A8971427D1A061009AC391 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				22A8971527D1A061009AC391 /* happy.mp3 */,
+				22A8971627D1A061009AC391 /* sad.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		22DCFD8D27C93C160013605E = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +148,7 @@
 		22DCFD9827C93C160013605E /* FeedBack-Team-D-1 */ = {
 			isa = PBXGroup;
 			children = (
+				22A8971427D1A061009AC391 /* Sounds */,
 				2285CC4627CE69550068D55C /* Model */,
 				2285CC4727CE695C0068D55C /* ViewControl */,
 				22DCFD9927C93C160013605E /* AppDelegate.swift */,
@@ -206,7 +226,9 @@
 				22DCFDB527C94A0E0013605E /* ServicesAndSurveyStoryBoard.storyboard in Resources */,
 				22AC054027CE59220019A959 /* LoginStoryboard.storyboard in Resources */,
 				22DCFDA627C93C180013605E /* Assets.xcassets in Resources */,
+				22A8971827D1A062009AC391 /* sad.mp3 in Resources */,
 				22DCFDA127C93C160013605E /* Main.storyboard in Resources */,
+				22A8971727D1A062009AC391 /* happy.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +250,9 @@
 				22DCFD9A27C93C160013605E /* AppDelegate.swift in Sources */,
 				22DCFD9C27C93C160013605E /* SceneDelegate.swift in Sources */,
 				2285CC5027CE6BB10068D55C /* User+CoreDataProperties.swift in Sources */,
+				228EB21927D1A5F700E75358 /* UserScore+CoreDataProperties.swift in Sources */,
 				22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */,
+				228EB21827D1A5F700E75358 /* UserScore+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
