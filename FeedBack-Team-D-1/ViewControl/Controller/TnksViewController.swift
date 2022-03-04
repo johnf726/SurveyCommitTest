@@ -2,7 +2,7 @@
 //  TnksViewController.swift
 //  FeedBack-Team-D-1
 //
-//  Created by David Gonzalez on 2/28/22.
+//  Created by Team -D on 2/28/22.
 //
 
 import UIKit
