@@ -2,7 +2,7 @@
 //  TnksViewController.swift
 //  FeedBack-Team-D-1
 //
-//  Created by David Gonzalez on 2/28/22.
+//  Created by Team -D on 2/28/22.
 //
 
 import UIKit
@@ -58,7 +58,7 @@ class TnksViewController: UIViewController {
         S1NoSelectedButton.isHidden = false
         S1SelectedButton.isHidden = true
         print("aca")
-        //PlayAudio( sound: soundNameHappy)
+        PlayAudio( sound: soundNameHappy)
         addDataUserScore(p : 100)
         getDataUserScore()
      //   getOneDataUser()
@@ -80,7 +80,7 @@ class TnksViewController: UIViewController {
         happyImage.isHidden = true
         S1NoSelectedButton.isHidden = true
         S1SelectedButton.isHidden = false
-      //  PlayAudio( sound: soundNameSad)
+        PlayAudio( sound: soundNameSad)
         S5NoSelected.isHidden = false
         S5Selected.isHidden = true
         addDataUserScore(p : 60)
