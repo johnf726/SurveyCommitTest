@@ -15,6 +15,10 @@ class SurveyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+//    saImage.isHidden = false
+//    HappyImage.isHidden = true
+    
 
     /*
     // MARK: - Navigation
